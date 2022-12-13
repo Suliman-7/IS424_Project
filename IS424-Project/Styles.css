@@ -1,0 +1,22 @@
+div.menu table          {background-color: blanchedalmond;
+                        width:60%;
+                        margin-bottom: 2em;}
+
+div.menu table td       {padding: 1.5em;
+                        font-size:1.2em;}
+
+table td:hover          {background-color: rgb(252, 221, 184);}
+
+p                       {width :60%;
+                        font-size: 1.1em;}
+                
+div.menu                {width: 100%;
+                        background-color: rgb(252, 221, 184);
+                        color: black;}
+
+div.menu table td a     {color: black;
+                        text-decoration: none;}
+div.menu table td a:hover{text-decoration: underline;}
+
+body                    {background-color:rgb(253, 245, 245) ;
+                        font-family: Arial, Helvetica, sans-serif;}

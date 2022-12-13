@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>CV Generator-Generate a CV</title>
+
+        <link rel="stylesheet" href="Styles.css">
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="CVscript.js" ></script>
+
+    </head>
+    <body id="body">
+        <div class="menu">
+            <table>
+                <td> <a href="Introduction.html"> Introduction</a></td>
+                <td> <a href="Generate a CV.html"> Generate a CV</a></td>
+                <td> <a href="About.html"> About</a></td>
+            </table>
+        </div>
+        <h1>Generate a CV</h1>
+        <form id="CVgenerator" action="" onsubmit="create()">
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" pattern="[A-Za-z]+" required oninvalid="this.setCustomValidity('Please Enter letters only.')" oninput="this.setCustomValidity('')">
+            <br><br>
+            <label for="name">Last Name:</label>
+            <input type="text" id="lname" pattern="[A-Za-z]+" required oninvalid="this.setCustomValidity('Please Enter letters only.')" oninput="this.setCustomValidity('')">
+            <br><br>
+
+            <label>Gender:</label>
+            <label>Male</label>
+            <input type="radio" name="gender" id="male" value="Male" required>
+            <label>Female</label>
+            <input type="radio" name="gender" id="female" value="Female">
+
+            <br><br>
+
+            <label>Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" max="2008-12-31" required >
+
+            <br><br>
+
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone"  pattern="[0-9]{10}" size="11" required oninvalid="this.setCustomValidity('Please Enter only 10 numbers.')" oninput="this.setCustomValidity('')">
+            
+            <br><br>
+            <label>Email:</label>
+            <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required oninvalid="this.setCustomValidity('Please Enter a valid email.')" oninput="this.setCustomValidity('')">
+            
+            <p id="textField">
+                <select name="input_type" id="input_type">
+                    <option value="">-- Select Type --</option>
+                    <option value="1">Education</option>
+                    <option value="2">Experience</option>
+                    <option value="3">Spoken languages</option>
+                </select>
+                <input type="button" onclick="createTextField()" value="Add Field" id="addField" />
+            </p>
+
+            
+            
+            <input type="submit" id="submit" name="submit"/>
+            <input type="reset" id="reset" name="reset"/>
+            
+           </form>
+
+
+
+    </body>
+</html>
